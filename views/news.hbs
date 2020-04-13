@@ -1,0 +1,33 @@
+<h1>World News</h1>
+{{#if newsLink.length}}
+<div class="grid">
+{{#each newsLink}}
+    <div class="row">
+        <div class="col">
+            <div class="card medium blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">{{title}}</span>
+                </div>
+                <div class="card-action">
+                    <a href="{{link}}" target="_blank">Go to site</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/each}}
+</div>
+{{else}}
+    <div class="preloader-wrapper active">
+    <div class="spinner-layer spinner-red-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+{{/if}}
+<a href="/"><p>Home</p></a>
+<a href="/newsRu"><p>Russia news</p></a>
