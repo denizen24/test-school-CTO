@@ -1,12 +1,10 @@
 const { Router } = require('express');
 
-const router = Router()
+const router = Router();
 
+// eslint-disable-next-line no-unused-vars
 router.get('/', (req, res) => {
-    res.render('index', {
-        title: 'Главная страница',
-        isHome: true
-    })
-})
+  res.send({ message: 'Home endpoint working' });
+});
 
-module.exports = router
+module.exports = router;
